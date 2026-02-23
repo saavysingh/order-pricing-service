@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS idx_outbox_events_aggregate_type ON outbox_events (aggregate_id, event_type);

@@ -1,0 +1,1 @@
+ALTER TABLE outbox_events ADD COLUMN next_attempt_at TIMESTAMP NOT NULL DEFAULT NOW();

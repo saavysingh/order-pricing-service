@@ -1,0 +1,93 @@
+@import url('@fontsource/ibm-plex-mono/400.css');
+@import url('@fontsource/ibm-plex-mono/500.css');
+@import url('@fontsource/ibm-plex-mono/600.css');
+@import url('@fontsource/ibm-plex-mono/700.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 142 60% 45%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 220 16% 18%;
+    --accent-foreground: 210 20% 85%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 142 60% 45%;
+
+    --radius: 0.5rem;
+
+    /* Pastel node accents */
+    --node-api: 217 80% 75%;
+    --node-postgres: 262 70% 78%;
+    --node-outbox: 180 55% 70%;
+    --node-publisher: 330 65% 78%;
+    --node-kafka: 25 85% 75%;
+    --node-pricing: 142 55% 72%;
+    --node-results: 200 70% 75%;
+    --node-retry: 0 75% 78%;
+
+    /* Status colors */
+    --status-idle: 220 10% 35%;
+    --status-progress: 45 90% 55%;
+    --status-success: 142 60% 45%;
+    --status-error: 0 72% 55%;
+
+    /* Custom tokens */
+    --surface-raised: 220 16% 12%;
+    --glow-primary: 142 60% 45%;
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 142 60% 45%;
+    --sidebar-primary-foreground: 220 20% 7%;
+    --sidebar-accent: 220 16% 18%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 220 14% 18%;
+    --sidebar-ring: 142 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+  }
+}
+
+@layer utilities {
+  .glow-success {
+    box-shadow: 0 0 12px -2px hsl(var(--status-success) / 0.4);
+  }
+  .glow-error {
+    box-shadow: 0 0 12px -2px hsl(var(--status-error) / 0.4);
+  }
+  .glow-progress {
+    box-shadow: 0 0 12px -2px hsl(var(--status-progress) / 0.4);
+  }
+}
